@@ -1,20 +1,19 @@
-# USER SELECTION
+from random import choice
 
+options = ["rock", "paper", "scissors"]
+
+# USER SELECTION
 u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
 print("USER CHOICE:", u)
-if u not in ["rock", "paper", "scissors"]:
+if u not in options:
     print("OOPS, TRY AGAIN")
     exit()
 
 # COMPUTER SELECTION
-
-from random import choice
-
-c = choice(["rock", "paper", "scissors"])
+c = choice(options)
 print("COMPUTER CHOICE:", c)
 
 # DETERMINATION OF WINNER
-
 if u == "rock" and c == "rock":
     print("TIE GAME")
 elif u == "rock" and c == "paper":
